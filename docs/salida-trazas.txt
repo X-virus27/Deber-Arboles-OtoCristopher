@@ -1,0 +1,145 @@
+Dígitos: 0262; códigos personales: 2 26 62
+ÁRBOL PERSONAL
+```mermaid
+flowchart TD
+  n60["60"]
+  n60 -->|I| n35
+  n60 -->|D| n80
+  n35["35"]
+  n35 -->|I| n20
+  n35 -->|D| n45
+  n20["20"]
+  n20 -->|I| n2
+  n20 -->|D| n26
+  n2["2"]
+  n26["26"]
+  n45["45"]
+  n45 -->|I| n40
+  n40["40"]
+  n80["80"]
+  n80 -->|I| n70
+  n80 -->|D| n90
+  n70["70"]
+  n70 -->|I| n62
+  n70 -->|D| n75
+  n62["62"]
+  n75["75"]
+  n90["90"]
+```
+PREORDEN: 60 35 20 2 26 45 40 80 70 62 75 90
+INORDEN: 2 20 26 35 40 45 60 62 70 75 80 90
+POSORDEN: 2 26 20 40 45 35 62 75 70 90 80 60
+TRAZA PREORDEN
+entra 60
+VISITA 60
+  entra 35
+  VISITA 35
+    entra 20
+    VISITA 20
+      entra 2
+      VISITA 2
+        null -> regresa
+        null -> regresa
+      entra 26
+      VISITA 26
+        null -> regresa
+        null -> regresa
+    entra 45
+    VISITA 45
+      entra 40
+      VISITA 40
+        null -> regresa
+        null -> regresa
+      null -> regresa
+  entra 80
+  VISITA 80
+    entra 70
+    VISITA 70
+      entra 62
+      VISITA 62
+        null -> regresa
+        null -> regresa
+      entra 75
+      VISITA 75
+        null -> regresa
+        null -> regresa
+    entra 90
+    VISITA 90
+      null -> regresa
+      null -> regresa
+Secuencia PREORDEN: 60 35 20 2 26 45 40 80 70 62 75 90
+Eliminar 2: true
+PREORDEN: 60 35 20 26 45 40 80 70 62 75 90
+ABB válido: true
+```mermaid
+flowchart TD
+  n60["60"]
+  n60 -->|I| n35
+  n60 -->|D| n80
+  n35["35"]
+  n35 -->|I| n20
+  n35 -->|D| n45
+  n20["20"]
+  n20 -->|D| n26
+  n26["26"]
+  n45["45"]
+  n45 -->|I| n40
+  n40["40"]
+  n80["80"]
+  n80 -->|I| n70
+  n80 -->|D| n90
+  n70["70"]
+  n70 -->|I| n62
+  n70 -->|D| n75
+  n62["62"]
+  n75["75"]
+  n90["90"]
+```
+Eliminar 45: true
+PREORDEN: 60 35 20 26 40 80 70 62 75 90
+ABB válido: true
+```mermaid
+flowchart TD
+  n60["60"]
+  n60 -->|I| n35
+  n60 -->|D| n80
+  n35["35"]
+  n35 -->|I| n20
+  n35 -->|D| n40
+  n20["20"]
+  n20 -->|D| n26
+  n26["26"]
+  n40["40"]
+  n80["80"]
+  n80 -->|I| n70
+  n80 -->|D| n90
+  n70["70"]
+  n70 -->|I| n62
+  n70 -->|D| n75
+  n62["62"]
+  n75["75"]
+  n90["90"]
+```
+Eliminar 60: true
+PREORDEN: 62 35 20 26 40 80 70 75 90
+ABB válido: true
+```mermaid
+flowchart TD
+  n62["62"]
+  n62 -->|I| n35
+  n62 -->|D| n80
+  n35["35"]
+  n35 -->|I| n20
+  n35 -->|D| n40
+  n20["20"]
+  n20 -->|D| n26
+  n26["26"]
+  n40["40"]
+  n80["80"]
+  n80 -->|I| n70
+  n80 -->|D| n90
+  n70["70"]
+  n70 -->|D| n75
+  n75["75"]
+  n90["90"]
+```
